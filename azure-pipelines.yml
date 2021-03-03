@@ -54,13 +54,13 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'Nash Playground'
+    artifactName: 'nashplayground'
 
 - task: AzureWebApp@1
   displayName: Azure App Service Deploy
   inputs:
     azureSubscription: 'Microsoft Azure Enterprise (30d33852-33ea-4312-95d6-cf6876ea5b94)'
     appType: 'webApp'
-    appName: 'nashplayground'
+    appName: 'nash-playground'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
