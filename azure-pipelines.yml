@@ -62,5 +62,5 @@ steps:
     azureSubscription: 'Microsoft Azure Enterprise (30d33852-33ea-4312-95d6-cf6876ea5b94)'
     appType: 'webApp'
     appName: 'nashplayground'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
